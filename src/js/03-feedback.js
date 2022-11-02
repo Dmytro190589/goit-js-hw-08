@@ -9,7 +9,6 @@ function populateTextarea() {
         return;
     }
     const keys = Object.keys(feedbackForm);
-    console.log(keys);
     for (const key of keys) {
         form[key].value = feedbackForm[key];
     }
@@ -28,5 +27,4 @@ function onFormSubmit(e) {
 }
 form.addEventListener('input', throttle(onTextareaInput, 500))
 form.addEventListener('submit', onFormSubmit);
-
-populateTextarea(form);
+populateTextarea();
