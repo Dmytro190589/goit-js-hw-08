@@ -18,10 +18,10 @@ function onTextareaInput({target}){
 const addForm = JSON.parse(serializedStats) || {};
 addForm[target.name] = target.value;
 localStorage.setItem( STORAGE_KEY, JSON.stringify(addForm));
-console.log(serializedStats);
 }
 function onFormSubmit(e) {
     e.preventDefault();
+    console.log(localStorage.getItem(STORAGE_KEY));
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY)
 }
